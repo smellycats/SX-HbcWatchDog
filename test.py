@@ -58,6 +58,7 @@ class WatchDog(object):
             return count_int
 
     def get_count_dict(self, date):
+        """根据日期获取各地区黄标车数据量"""
         self.count_dict = {}
         for i in self.kkdd_dict.keys():
             self.count_dict[self.kkdd_dict[i]] = self.get_hbc_count(date, i)
